@@ -1,0 +1,3 @@
+document.querySelector("#new-friend").innerHTML = "<%= j link_to 'New Friend', new_friend_path, class:"btn btn-dark", remote: true %>"
+document.querySelector("#result_table").innerHTML = "<%= j render 'result', friend: @friend %>"
+
