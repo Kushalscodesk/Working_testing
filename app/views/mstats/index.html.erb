@@ -4,7 +4,27 @@
 	
 </head>
 <body>
-	<p>hello</p>
-	<%= pie_chart Message.group('conversation_id').count %>
+    <div>
+    	<canvas id="myChart" width="960" height="200"></canvas>
+
+		<script>var ctx = document.getElementById('myChart');
+		var myChart = new Chart(ctx, {
+			  type: 'bar',
+			  data: {
+			    labels: <%= @mdata.keys %>,
+			    datasets: [{
+			      label: 'Number of Messages',
+			      data: <%= @mdata.values %>,
+			      borderWidth: 1
+			    }]
+			  }
+			});
+	    </script>
+    	
+    </div>
+	
+	
+	<p>hello <%= @mdata %> </p>
+
 </body>
 </html>

@@ -20,6 +20,13 @@ class MessagesController < ApplicationController
 		end
 	end
 
+
+	def mstats
+		
+	end
+
+
+
 	private
 
 	def message_params

@@ -1,5 +1,6 @@
 class MstatsController < ApplicationController
 	def index
-		@data = Message.group('user_id').count
+		@mdata = Message.group('user_id').count
+		@cdata = Conversation.all
 	end
 end
